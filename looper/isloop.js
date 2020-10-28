@@ -2,7 +2,19 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    const array = [];
+    const value = linkedlist.head.value;
+    let currentNode = linkedlist.head;
 
+
+    while (currentNode.next) {
+        if (array.includes(currentNode.value)) {
+            return true; 
+        } 
+        array.push(currentNode.value);
+        currentNode = currentNode.next;
+    }
+    return false;
 };
 
 
